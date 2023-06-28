@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unamed idle game</title>
+    <script src="game.js" defer></script>
+</head>
+
+<link href="styles.css" rel="stylesheet">
+<body onload="init()">
+<p id="money"></p>
+<button id="upgrade" onclick="Upgrade(upgrade1_stats)"></button>
+<button id="upgrade2" onclick="Upgrade(upgrade2_stats)"></button>
+<button id="upgrade3" onclick="Upgrade(upgrade3_stats)"></button>
+<button id="upgrade4" onclick="Upgrade(upgrade4_stats)"></button>
+<p id="income_per_sec"></p>
+<p id="upgrade1_count"></p>
+<p id="upgrade2_count"></p>
+<p id="upgrade3_count"></p>
+<p id="upgrade4_count"></p>
+<button id="free" onclick="free_upgrades()">free upgrades</button>
+</body>
+</html>
