@@ -1,0 +1,97 @@
+body {
+    background-color: #222;
+    color: white;
+  }
+#money{
+  position: fixed;
+  left: 12px;
+  top: 3px;
+  font-size: 22px;
+}
+#upgrade{
+  position: fixed;
+  right: 55px;
+  top: 150px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  width: 185px;
+  height: 85px;
+  color: white;
+  font-size: 18px;
+}
+#upgrade1_count{
+  position: fixed;
+  right: 255px;
+  top: 172px;
+  font-size: 18px;
+}
+#upgrade2{
+  position: fixed;
+  right: 55px;
+  top: 250px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  width: 185px;
+  height: 85px;
+  color: white;
+  font-size: 18px;
+}
+#upgrade2_count{
+  position: fixed;
+  right: 255px;
+  top: 272px;
+  font-size: 18px;
+}
+#upgrade3{
+  position: fixed;
+  right: 55px;
+  top: 350px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  width: 185px;
+  height: 85px;
+  color: white;
+  font-size: 18px;
+}
+#upgrade3_count{
+  position: fixed;
+  right: 255px;
+  top: 372px;
+  font-size: 18px;
+}
+#upgrade4{
+  position: fixed;
+  right: 55px;
+  top: 450px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  width: 185px;
+  height: 85px;
+  color: white;
+  font-size: 18px;
+}
+#upgrade4_count{
+  position: fixed;
+  right: 255px;
+  top: 472px;
+  font-size: 18px;
+}
+#income_per_sec{
+  position: fixed;
+  right: 24px;
+  font-size: 20px;
+}
+/* dev things */
+#free{
+  position: fixed;
+  left: 655px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+}
