@@ -2,10 +2,11 @@ body {
     background-color: #222;
     color: white;
   }
-#money{
+/* game elemets */
+  #money{
   position: fixed;
-  left: 12px;
-  top: 3px;
+  left: px;
+  top: 5px;
   font-size: 22px;
 }
 #upgrade{
@@ -85,13 +86,48 @@ body {
   right: 24px;
   font-size: 20px;
 }
-/* dev things */
-#free{
+#earn_money{
   position: fixed;
-  left: 655px;
+  top: 60px;
   background-color: #464545;
   border-style: solid;
   border: 0px;
   color: white;
   font-size: 18px;
+  width: 85px;
+  height: 65px;
+}
+
+/* dev things */
+#free{
+  position: fixed;
+  left: 685px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+}
+#set_money{
+  position: fixed;
+  left: 485px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  width: 100px;
+  height: 23px;
+}
+/* fun things */
+#rainbow{
+  position: fixed;
+  left: 592px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  width: 85px;
+  height: 23px;
 }
