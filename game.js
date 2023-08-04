@@ -61,7 +61,7 @@ function save(player,auto_save){
 
 function load(){
   if (document.cookie == ""){
-    save(create_default_player(),false)
+    save(create_default_player(),true)
   }
   cookie = document.cookie
   cookie = cookie.replace('savedata=', '');
