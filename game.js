@@ -32,7 +32,7 @@ function create_default_player() {
       element_id: "upgrade3"
     },
     upgrade4_stats: {
-      base_price: 25000,
+      base_price: 18000,
       growth_rate: 1.6,
       current_price: 18000, // Note: I corrected this value, as there was a mismatch in the given data.
       times_owned: 0,
@@ -69,7 +69,7 @@ function load(){
   
 
 }
-// auto save is very broken
+// auto save is no longer very broken // it was broken due to my extreme blindness 
 async function auto_save(){
   while (true){
     save(player,true)
@@ -77,7 +77,16 @@ async function auto_save(){
   }
 }
 
-
+function reset_save(upgrade_stats){
+  if (confirm("ARE YOU SURE YOU WANT TO RESET ALL YOUR PROGRESS")){
+    save(create_default_player(),true)
+    upgrade_stats = [player.upgrade1_stats, player.upgrade2_stats, player.upgrade3_stats, player.upgrade4_stats]
+    for(i=0;i!=4;i++){
+      formatted_stats = upgrade_stats[i]["current_price"].toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2})
+      document.getElementById(upgrade_stats[i]["element_id"]).innerHTML = formatted_stats 
+    }  
+  }
+}
 
 // END OF SAVE CODE
 
@@ -135,7 +144,9 @@ function set_money(){
 
 function earn_money(){
   player.money += player.click_amount
+  
 }
+
 
 async function Update_money() {
   while (true) {
