@@ -109,6 +109,18 @@ body {
   height: 65px;
 }
 
+#reset_save{
+  position: fixed;
+  top: 240px;
+  background-color: #464545;
+  border-style: solid;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  width: 85px;
+  height: 65px;
+}
+
 /* dev things */
 #free{
   position: fixed;
