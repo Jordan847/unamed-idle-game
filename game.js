@@ -54,7 +54,7 @@ function save(player,auto_save){
     console.log("auto saved")
   }
   else{
-    alert("game saved")
+    showsaveNotification(false)
   }
 }
 
@@ -73,10 +73,28 @@ function load(){
 async function auto_save(){
   while (true){
     save(player,true)
-    await sleep(25 * 1000)
+    await sleep(45 * 1000)
+    showsaveNotification(true)
   }
 }
-
+function showsaveNotification(auto_save) {
+  if (auto_save){
+    saveNotification.style.bottom = "20px"
+    saveNotification.style.left = "20px"
+    saveNotification.style.opacity = "1"
+    saveNotification.innerHTML = "game saved"
+  }
+  else{
+    document.getElementById("save").innerHTML = "saved"
+    document.getElementById("save").style.backgroundColor = "#14a603"
+  }
+  setTimeout(hidesaveNotification, 2000) // Hide after 2 seconds
+}
+function hidesaveNotification() {
+  saveNotification.style.opacity = "0";
+  document.getElementById("save").innerHTML = "save"
+  document.getElementById("save").style.backgroundColor = "#464545"
+}
 function reset_save(upgrade_stats){
   if (confirm("ARE YOU SURE YOU WANT TO RESET ALL YOUR PROGRESS")){
     save(create_default_player(),true)
@@ -99,6 +117,7 @@ load()
 upgrade_stats = [player.upgrade1_stats, player.upgrade2_stats, player.upgrade3_stats, player.upgrade4_stats]
 upgrade_elements = ["upgrade","upgrade2","upgrade3","upgrade4"]
 upgrade_elements_count = ["upgrade1_count","upgrade2_count","upgrade3_count","upgrade4_count"]
+saveNotification = document.getElementById("save-Notification")
 
 function init(upgrade_stats){
   for(i=0;i!=4;i++){
